@@ -1,0 +1,22 @@
+import pandas as pd
+
+# Load the Excel files
+file1 = pd.read_excel("models/large_data.xlsx")
+file2 = pd.read_excel("models/merge1.xlsx")
+
+# Standardize column names
+file1.columns = file1.columns.str.strip().str.lower()
+file2.columns = file2.columns.str.strip().str.lower()
+
+# Make sure they have merchant_name and category
+file1['merchant_name'] = file1['merchant_name'].str.strip().str.lower()
+file2['merchant_name'] = file2['merchant_name'].str.strip().str.lower()
+
+# Merge
+combined = pd.concat([file1, file2], ignore_index=True)
+combined = combined.drop_duplicates(subset='merchant_name', keep='last')
+
+# Save to final training file
+combined.to_excel("models/final_cleaned_and_updated.xlsx", index=False)
+
+print("✅ Merged and saved as models/final_cleaned_and_updated.xlsx")
