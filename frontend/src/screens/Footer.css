@@ -1,0 +1,36 @@
+.app-footer {
+  background: #1e1e1e;
+  color: #eee;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-top: 1px solid #1e1e1e;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-text {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  color: #eee;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffb347; /* or Attijari orange if you prefer */
+}

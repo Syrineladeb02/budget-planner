@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.syrine-btn {
+  background: linear-gradient(90deg, #ff5e3a, #ff9900);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;                         /* spacing between icon and text */
+  transition: background-color 0.3s ease;
+  margin-right: 40px;
+ 
+}
+
+.syrine-btn:hover {
+  background-color: #c0392b;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto 10px;
+  padding: 0 30px;
+  max-width: 1200px;
+  margin-top: 90px;
+}

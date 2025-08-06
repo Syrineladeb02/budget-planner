@@ -1,0 +1,114 @@
+/* Main container */
+.budget-container {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
+  color: #1e1e1e;
+}
+
+/* Header */
+.budget-header h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #444;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+/* Notification */
+.budget-notification {
+  background: linear-gradient(90deg, #ff5e3aa9, #ff9900b2);
+  color: #ffffff;
+  border-radius: 50px;
+  padding: 0.8rem 1.4rem;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 14px rgba(255, 115, 0, 0.603);
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Budget list cards */
+.budget-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.budget-card {
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  padding: 1.2rem 1.8rem;
+  box-shadow: 0 6px 20px rgba(190, 173, 150, 0.466);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.budget-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 38px rgba(161, 124, 100, 0.548);
+}
+
+.budget-card .left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.budget-card .icon {
+  font-size: 1.5rem;
+}
+
+.budget-card h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2e2e2e;
+}
+
+/* Input box */
+.budget-card input {
+  width: 140px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  text-align: right;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.budget-card input:focus {
+  border-color: #d99a6c;
+  outline: none;
+  box-shadow: 0 14px 38px rgba(161, 124, 100, 0.548);
+}
+
+/* Save Button */
+.save-btn {
+  margin-top: 2.5rem;
+  background: linear-gradient(90deg, #ff5e3a, #ff9900);
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 8px 28px rgba(223, 141, 82, 0.4);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.save-btn:hover {
+  background: linear-gradient(90deg, #ff5e3a, #ff9900);
+  box-shadow: 0 12px 36px rgba(176, 124, 81, 0.6);
+}

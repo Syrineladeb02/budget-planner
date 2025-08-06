@@ -1,0 +1,113 @@
+.notifications-container {
+  max-width: 850px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e1e1e;
+}
+
+.notif-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.notif-header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.notif-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.notif-card {
+  background: linear-gradient(90deg, #ffe5e0, #ffe3c9);
+  padding: 1.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(255, 94, 58, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.notif-card:hover {
+  transform: translateY(-4px);
+}
+
+.notif-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notif-top h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e14d2a;
+}
+
+.overspent {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #ffe2db;
+  color: #ff5e3a;
+  padding: 6px 12px;
+  border-radius: 12px;
+}
+
+.notif-message {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.notif-happy {
+  text-align: center;
+  background-color: #d4edda;
+  color: #155724;
+  font-size: 1.1rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #badbcc;
+  box-shadow: 0 4px 16px rgba(72, 180, 97, 0.15);
+}
+
+/* Popup alert banner */
+.popup-alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff4d4f;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(255, 77, 79, 0.7);
+  font-weight: bold;
+  max-width: 80%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.popup-alert button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0;
+}

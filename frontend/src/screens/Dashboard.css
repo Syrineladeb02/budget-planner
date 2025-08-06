@@ -1,0 +1,207 @@
+/* Container and base styles */
+.dashboard-container {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 3rem 3.5rem;
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
+  color: #1e1e1e;
+}
+
+.month-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+  color: #5f5f5f;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
+.welcome {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.track {
+  font-size: 19px;
+  font-weight: 600;
+  color: #ff5e3a;
+  margin-bottom: 3rem;
+  letter-spacing: 0.03em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Main grid layout */
+.dashboard-main {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3.5rem;
+}
+
+/* Left summary panel */
+.summary-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.5rem;
+  background: #fff7f093;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(255, 94, 58, 0.2);
+  user-select: none;
+}
+
+.circle-progress-glow {
+  width: 160px;
+  filter: drop-shadow(0 0 15px rgba(245, 163, 145, 0.6));
+}
+
+.circle-progress-glow svg {
+  width: 160px !important;
+  height: 160px !important;
+}
+
+.summary-details {
+  text-align: center;
+}
+
+.spent-amount {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff5e3a;
+  margin-bottom: 0.3rem;
+}
+
+.budget-amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.6rem;
+}
+
+.progress-note {
+  font-size: 14px;
+  color: #999;
+  font-style: italic;
+}
+
+/* Right panel: categories and buttons */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Categories grid */
+.category-bars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 28px;
+}
+
+.category-item {
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 38px rgba(161, 124, 100, 0.548);
+}
+
+.category-item .name {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  color: #1e1e1e;
+  user-select: none;
+}
+
+.category-item .bar {
+  background-color: #e4e0e0c2;
+  border-radius: 14px;
+  height: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.category-item .fill {
+  background: linear-gradient(90deg, #ff5e3a, #ff9900);
+  height: 100%;
+  transition: width 0.5s ease;
+  border-radius: 14px 0 0 14px;
+}
+
+.category-item .fill.over {
+  background-color: #e8413b;
+  box-shadow: 0 0 12px rgba(232, 65, 59, 0.7);
+}
+
+.category-item .amount {
+  font-weight: 600;
+  color: #555;
+  font-size: 15px;
+  align-self: flex-end;
+  user-select: none;
+}
+
+/* Buttons */
+.generate-buttons {
+  display: flex;
+  gap: 1.75rem;
+  justify-content: flex-end;
+}
+
+.generate-btn,
+.budget-btn {
+  padding: 16px 40px;
+  border: none;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #1e1e1e);
+  color: white;
+  transition: background 0.35s ease, transform 0.35s ease;
+  user-select: none;
+}
+
+.generate-btn:hover,
+.budget-btn:hover {
+  background: linear-gradient(90deg, ff5e3a, #ffaa00);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 38px rgba(231, 150, 99, 0.541);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .dashboard-main {
+    grid-template-columns: 1fr;
+  }
+  .category-bars {
+    grid-template-columns: 1fr;
+  }
+  .summary-panel {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .summary-details {
+    text-align: left;
+  }
+  .generate-buttons {
+    justify-content: center;
+  }
+}

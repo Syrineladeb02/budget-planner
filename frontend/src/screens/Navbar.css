@@ -1,0 +1,70 @@
+/* Navbar container */
+.navbar {
+  margin-top: 30px;
+  background: #312e2c;
+  padding: 0.8rem 2rem;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.notification-wrapper {
+  position: relative;
+}
+
+.notification-link {
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.notif-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  animation: bounce 0.2s ease-in-out;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(0.8); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+
+/* Make sure UL doesn't stretch and stays centered */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin: 0 auto; /* THIS centers the list inside navbar */
+  padding: 0;
+}
+
+/* Nav links style */
+.navbar-links li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+  font-weight: 600;
+}
+
+/* Active link and hover effect */
+.navbar-links li a.active,
+.navbar-links li a:hover {
+  color: #ff5e3a;
+  border-bottom-color: #ff5e3a;
+}
